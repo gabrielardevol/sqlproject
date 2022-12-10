@@ -35,3 +35,7 @@ db.execute("INSERT INTO people (name, birth, description)
   db.execute("INSERT INTO works (name, birth, description)
   VALUES ('Gabriela', '1996-11-13', 'sóc jo')
   ")
+
+  db.execute("INSERT INTO work_types (name, description)
+  VALUES ('Visual arts', 'Painting, sculpture, cinema, performance...'), ('Literature', 'Books, articles, narrative, essay...')
+  ")
