@@ -10,13 +10,18 @@ db.execute("DROP TABLE `work_types`")
 db.execute("CREATE TABLE `people` (
   `id`  INTEGER PRIMARY KEY AUTOINCREMENT,
   `name` TEXT,
+  `birthplace` TEXT,
   `birth` DATE,
   `death` DATE,
   `description` TEXT
 );")
-db.execute("INSERT INTO people (name, birth, description)
-  VALUES ('Gabriel', '1996-11-13', 'sóc jo')
-  ")
+db.execute("INSERT INTO people (name, birth, birthplace, description)
+  VALUES ('Lluís Llach', '1948', 'Girona',
+    'Músic, cantautor, escriptor i polític català. És precís entendre la seva oposició al règim franquista en relació a la seva orientació homosexual.')")
+
+    db.execute("INSERT INTO people (name, birth, birthplace, description)
+    VALUES ('Lluís Llach', '1948', 'Girona',
+      'Músic, cantautor, escriptor i polític català. És precís entendre la seva oposició al règim franquista en relació a la seva orientació homosexual.')")
 
   db.execute("CREATE TABLE `works` (
     `id`  INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -37,5 +42,5 @@ db.execute("INSERT INTO people (name, birth, description)
   ")
 
   db.execute("INSERT INTO work_types (name, description)
-  VALUES ('Visual arts', 'Painting, sculpture, cinema, performance...'), ('Literature', 'Books, articles, narrative, essay...')
-  ")
+  VALUES ('Visual arts', 'Painting, sculpture, cinema, performance...'),
+  ('Literature', 'Books, articles, narrative, essay...'), ('Asociation', '.') ")
