@@ -15,7 +15,7 @@ class Router
       choice = @controller.display_options
       case choice
       when "1"
-        puts @controller.display
+        @controller.display
       when "2"
         puts @controller.add
       else
@@ -25,5 +25,3 @@ class Router
   end
 
 end
-
-r = Router.new
